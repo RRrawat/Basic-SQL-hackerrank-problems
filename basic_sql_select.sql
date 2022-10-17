@@ -267,3 +267,53 @@ SELECT DISTINCT CITY FROM STATION WHERE LOWER(SUBSTR(CITY,1,1)) NOT IN ('a','e',
 Query the Name of any student in STUDENTS who scored higher than 75 Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
 '''
 SELECT NAME FROM STUDENTS WHERE MARKS > 75 ORDER BY SUBSTR(NAME, LENGTH(NAME)-2, 3), ID;    
+
+'''
+###**[Employee Names](https://www.hackerrank.com/challenges/name-of-employees/problem)**
+
+Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+Input Format
+
+The Employee table containing employee data for a company is described as follows:
+
+|  Column | Type |
+|---|---|
+| employee_id  | INTEGER |
+| name | STRING   |
+| months | INTEGER  |
+| salary | INTEGER |
+
+where employee_id is an employees ID number, name is their name, months is the total number of months they have been working for the company, and salary is their monthly salary.
+
+Sample Input
+
+|  employee_id | name | marks | salary  |
+|---|---|----|-----|
+| 12228 | Rose | 15 | 1968 |
+| 33645 | Angela   | 1 | 3443 |
+| 45692  | Frank  | 17  | 1608  |
+| 56118  | Patrick  |  7 | 1345
+| 59725 | Lisa | 11 | 2330 |
+| 74197 | Kimberly   | 16 | 4372 |
+| 78454  | Bonnie  |  8 | 1771 |
+| 83565 | Michael |  6 | 2017
+| 98607  | Todd  |  5 | 3396 |
+| 99989 | Joe |  9 | 3573 |
+
+Sample Output
+
+Angela
+Bonnie
+Frank
+Joe
+Kimberly
+Lisa
+Michael
+Patrick
+Rose
+Todd
+
+**Solution**
+'''
+SELECT NAME FROM EMPLOYEE ORDER BY NAME;   
